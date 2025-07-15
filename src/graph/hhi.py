@@ -83,7 +83,7 @@ def plot_stacked_bar_chart(df, GENRE_COLORS=None, selected_genre=None):
                     y=[perc],
                     name=name,
                     marker_color=color,
-                    hovertemplate=f"{name}: {{y:.1f}}%<extra></extra>",
+                    hovertemplate=f"{name}: {perc:.1f}%<extra></extra>",
                     showlegend=False  # 장르별로 많은 게임 있으니 범례는 생략하거나 조건부 사용
                 ))
 
