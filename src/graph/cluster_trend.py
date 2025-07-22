@@ -40,9 +40,10 @@ def plot_cluster_trend_scatter(genres, trend, peak_timing, labels):
         'peak_timing': peak_timing,
         'cluster': labels
     })
+    df_plot['cluster_str'] = df_plot['cluster'].astype(str)
     fig = px.scatter(
         df_plot, x='trend', y='peak_timing',
-        color='cluster', color_discrete_sequence=['blue', 'red', 'green'],
+        color='cluster_str', color_discrete_sequence=['blue', 'red', 'green'],
         text='genre', title='장르별 트렌드(기울기) vs Peak Timing 기반 클러스터링',
         labels={'trend': '상승/하락 추세(기울기)', 'peak_timing': 'Peak Timing(0~1)'}
     )
